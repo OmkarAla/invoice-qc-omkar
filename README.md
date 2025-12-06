@@ -1,8 +1,8 @@
 # Invoice QC Service – SUPEDIO Bestellung  
 **Take-home Assignment – Software Engineer Intern (Data & Development)**  
-**Candidate:** [Your Full Name] | December 2025  
+**Candidate:** [Omkar Ujwal Krishna Ala] | December 2025  
 
-![Demo](https://i.imgur.com/6jK8sL2.png) <!-- optional – replace with real screenshot or delete -->
+![Demo](https://i.imgur.com/avkAZlw.png)
 
 A complete **Invoice Extraction & Quality Control** pipeline that:
 
@@ -13,21 +13,21 @@ A complete **Invoice Extraction & Quality Control** pipeline that:
 
 ---
 
-## ✅ Completed Scope
+## Completed Scope
 
 | Part | Status | Details |
 |------|--------|---------|
-| Schema & Validation Design | ✔️ Done | Documented below + Pydantic models |
-| PDF → JSON Extraction | ✔️ Done | Heuristics + table parsing for provided samples |
-| Validation Core | ✔️ Done | Pydantic + custom business rules |
-| CLI | ✔️ Done | `extract`, `validate`, `full-run` |
-| HTTP API | ✔️ Done | FastAPI with `/extract-and-validate` |
-| Bonus Fullstack QC Console | ✔️ Done | Drag & drop UI, live results |
-| Dockerfile & pyproject.toml | ✔️ Done | Production-ready |
+| Schema & Validation Design | Done | Documented below + Pydantic models |
+| PDF → JSON Extraction | Done | Heuristics + table parsing for provided samples |
+| Validation Core | Done | Pydantic + custom business rules |
+| CLI | Done | `extract`, `validate`, `full-run` |
+| HTTP API | Done | FastAPI with `/extract-and-validate` |
+| Bonus Fullstack QC Console | Done | Drag & drop UI, live results |
+| Dockerfile & pyproject.toml | Done | Production-ready |
 
 ---
 
-## 📄 Schema & Validation Design
+## Schema & Validation Design
 
 ### Invoice Fields
 
@@ -59,7 +59,7 @@ A complete **Invoice Extraction & Quality Control** pipeline that:
 ---
 
 
-## 🏗️ Architecture
+## Architecture
 ~~~
 pdfs/
  └→ invoice_qc/extractor.py → Invoice (Pydantic)
@@ -69,7 +69,7 @@ pdfs/
    CLI (typer) ← FastAPI ←→ React + Tailwind UI
 ~~~
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Backend
 
@@ -105,4 +105,5 @@ docker run -p 8000:8000 invoice-qc
 python -m invoice_qc.cli full-run --pdf-dir samples --report report.json
 ```
 
+## [Demo Video]()
 
