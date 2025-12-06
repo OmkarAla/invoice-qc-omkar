@@ -75,7 +75,10 @@ function App() {
               </div>
             )}
 
-            {loading && <Loader2 class EARLY="w-8 h-8 animate-spin text-blue-600 mx-auto mt-8" />}
+            {loading && (
+  <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mt-8" />
+)}
+
           </div>
         </div>
 
