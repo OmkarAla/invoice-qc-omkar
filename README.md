@@ -60,14 +60,14 @@ A complete **Invoice Extraction & Quality Control** pipeline that:
 
 
 ## 🏗️ Architecture
+~~~
 pdfs/
-└→ invoice_qc/extractor.py → Invoice (Pydantic)
-↓
-invoice_qc/validator.py → ValidationResult[]
-↓
-CLI (typer) ← FastAPI ←→ React + Tailwind UI
-
----
+ └→ invoice_qc/extractor.py → Invoice (Pydantic)
+                     ↓
+               invoice_qc/validator.py → ValidationResult[]
+                     ↓
+   CLI (typer) ← FastAPI ←→ React + Tailwind UI
+~~~
 
 ## 🚀 Quick Start
 
@@ -104,4 +104,5 @@ docker run -p 8000:8000 invoice-qc
 ```bash
 python -m invoice_qc.cli full-run --pdf-dir samples --report report.json
 ```
+
 
