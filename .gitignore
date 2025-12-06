@@ -1,0 +1,108 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+dmypy.json
+
+# Virtual environment (if you ever create one in root)
+.env
+.venv*/
+venv*/
+
+# FastAPI / Uvicorn
+*.sqlite3
+*.db
+
+# Node / Frontend (Vite + React)
+node_modules/
+dist/
+build/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Vite
+frontend/vite.config.js.timestamp-*
+frontend/.vite/
+
+# NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.project
+.settings
+.idea/
+.vscode/
+*.sublime-*
+*.code-workspace
+
+# Logs and temp files
+*.log
+temp/
+tmp/
+*.tmp
+
+# Docker
+.dockerignore
+Dockerfile.*
+docker-compose*.yaml
+
+# Optional: if you keep sample PDFs in repo (recommended NOT to)
+# samples/
+# *.pdf
+
+# AI notes / personal stuff (optional but nice)
+ai-notes/
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.zip
+*.rar
+
+# Python build
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# PyCharm/IntelliJ (if anyone uses it)
+.idea/
+
+# VS Code
+.vscode/

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoice-qc"
+version = "0.1.0"
+description = "Invoice extraction and QC service"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "pdfplumber",
+    "typer[all]",
+    "fastapi",
+    "uvicorn[standard]"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
