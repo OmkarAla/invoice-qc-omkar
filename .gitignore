@@ -26,7 +26,7 @@ coverage.xml
 .dmypy.json
 dmypy.json
 
-# Virtual environment (if you ever create one in root)
+# Virtual environment folders
 .env
 .venv*/
 venv*/
@@ -81,28 +81,9 @@ tmp/
 Dockerfile.*
 docker-compose*.yaml
 
-# Optional: if you keep sample PDFs in repo (recommended NOT to)
-# samples/
-# *.pdf
-
-# AI notes / personal stuff (optional but nice)
-ai-notes/
-*.mov
-*.mp4
-*.avi
-*.mkv
-*.zip
-*.rar
-
 # Python build
 *.egg-info/
 dist/
 build/
 *.egg
 *.whl
-
-# PyCharm/IntelliJ (if anyone uses it)
-.idea/
-
-# VS Code
-.vscode/

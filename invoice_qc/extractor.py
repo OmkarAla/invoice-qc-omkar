@@ -58,7 +58,7 @@ def extract_from_pdf(pdf_path: Path) -> Invoice:
             break
     data["buyer_name"] = buyer_name
 
-    # 4. SELLER NAME — NEW, PERFECT METHOD
+    # 4. SELLER NAME
     seller_name = "Unknown Supplier"
     found_buyer = False
     for line in lines:
