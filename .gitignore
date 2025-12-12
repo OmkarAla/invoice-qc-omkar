@@ -78,8 +78,6 @@ tmp/
 
 # Docker
 .dockerignore
-Dockerfile.*
-docker-compose*.yaml
 
 # Python build
 *.egg-info/
