@@ -3,16 +3,13 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files from the frontend folder (context is ./frontend)
 COPY package*.json ./
 RUN npm ci
 
-# Copy the rest of the app (now context is correct)
 COPY . .
 
 RUN npm run build
 
-# Production nginx stage
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80

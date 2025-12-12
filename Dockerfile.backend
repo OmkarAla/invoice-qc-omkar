@@ -2,11 +2,12 @@
 FROM python:3.11-slim
 
 WORKDIR /app
+
 COPY pyproject.toml .
 COPY invoice_qc/ ./invoice_qc/
 COPY api/ ./api/
 
-RUN pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir -e . python-multipart
 
 EXPOSE 8000
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
