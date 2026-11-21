@@ -40,7 +40,7 @@ docker compose up --build
 ```
 
 - Console: <http://localhost:5173>
-- API: <http://localhost:8000/docs>
+- API: <http://localhost:8000/api/docs>
 
 Without Docker:
 

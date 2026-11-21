@@ -15,7 +15,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 
-app = FastAPI(title="Invoice QC Service")
+app = FastAPI(
+    title="Invoice QC Service",
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json",
+    redoc_url=None,
+)
 
 app.add_middleware(
     CORSMiddleware,
