@@ -60,12 +60,14 @@ There is no automated suite yet. Validation covers required fields, negative tot
 
 ## Deploy
 
-The frontend is a static Vite build; the API is a FastAPI app in `api/`.
+One Vercel project, two services, configured in `vercel.json`:
 
-- **Split (current setup):** the API is a Vercel project at the repo root using the FastAPI preset; the console is a second Vercel project with Root Directory `frontend`, built with `npm ci && npm run build`, and `VITE_API_BASE` set to the API origin.
-- **Elsewhere:** the API also runs from `Dockerfile.backend` on Render, Railway or Fly; point `VITE_API_BASE` at whichever origin you use.
+| Service | Root | Framework | Public path |
+|---|---|---|---|
+| `api` | `.` | FastAPI | `/api/*` and `/health` |
+| `web` | `frontend` | Vite | everything else |
 
-Either way the frontend reads `VITE_API_BASE` and falls back to same-origin, so the same build works in both layouts.
+The console calls `/api` on the same origin, so the browser is the caller and no cross-origin setup is needed. `docker compose` and `Dockerfile.backend` remain the portable path for Render, Railway or Fly.
 
 ## Limitations
 

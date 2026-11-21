@@ -14,7 +14,7 @@ function App() {
     Array.from(files).forEach(f => form.append("files", f))
 
     setLoading(true)
-    axios.post(`${import.meta.env.VITE_API_BASE ?? "/api/main"}/extract-and-validate`, form)
+    axios.post(`${import.meta.env.VITE_API_BASE ?? "/api"}/extract-and-validate`, form)
       .then(res => setResults(res.data))
       .catch(() => alert("Upload failed — server not running?"))
       .finally(() => setLoading(false))

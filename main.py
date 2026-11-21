@@ -27,13 +27,13 @@ app.add_middleware(
 
 
 @app.get("/health")
-@app.get("/api/main/health")
+@app.get("/api/health")
 async def health():
     return {"status": "ok"}
 
 
 @app.post("/extract-and-validate")
-@app.post("/api/main/extract-and-validate")
+@app.post("/api/extract-and-validate")
 async def process(files: List[UploadFile] = File(...)):
     # Imported lazily so /health stays up even if the package bundle is broken.
     from invoice_qc.extractor import extract_from_pdf

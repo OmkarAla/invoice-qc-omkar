@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      // Dev: strip the production prefix and hit the local FastAPI server.
-      '/api/main': {
+      // Dev: strip the public /api prefix and hit the local FastAPI server.
+      '/api': {
         target: 'http://localhost:8000',
-        rewrite: (path) => path.replace(/^\/api\/main/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
