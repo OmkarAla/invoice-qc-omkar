@@ -62,8 +62,8 @@ There is no automated suite yet. Validation covers required fields, negative tot
 
 The frontend is a static Vite build; the API is a FastAPI app in `api/`.
 
-- **Vercel (both):** the repo ships a `vercel.json` that builds `frontend/` and routes `/extract-and-validate` and `/health` to the Python function.
-- **Split:** host the API anywhere that runs Python (Render, Railway, Fly) and the console on Vercel, then set `VITE_API_BASE` to the API origin at build time.
+- **Split (current setup):** the API is a Vercel project at the repo root using the FastAPI preset; the console is a second Vercel project with Root Directory `frontend`, built with `npm ci && npm run build`, and `VITE_API_BASE` set to the API origin.
+- **Elsewhere:** the API also runs from `Dockerfile.backend` on Render, Railway or Fly; point `VITE_API_BASE` at whichever origin you use.
 
 Either way the frontend reads `VITE_API_BASE` and falls back to same-origin, so the same build works in both layouts.
 
