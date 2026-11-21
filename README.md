@@ -4,8 +4,6 @@ Extract, validate and review German B2B invoices from PDFs.
 
 **[Live console](https://invoice-qc.vercel.app/) · [API docs](https://invoice-qc.vercel.app/api/docs) · [Health](https://invoice-qc.vercel.app/health)**
 
-![Invoice QC console showing a parsed invoice with a passing validation](docs/console.png)
-
 > Demo project. The parser is heuristic and tuned for German `Bestellung` / invoice layouts, not a general document-AI product.
 
 ## What it does
