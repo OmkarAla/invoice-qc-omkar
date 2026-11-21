@@ -12,7 +12,8 @@ dependencies = [
     "pdfplumber",
     "typer[all]",
     "fastapi",
-    "uvicorn[standard]"
+    "uvicorn[standard]",
+    "python-multipart"
 ]
 
 [tool.setuptools.packages.find]

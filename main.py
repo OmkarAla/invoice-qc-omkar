@@ -13,8 +13,7 @@ from pathlib import Path
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
-from invoice_qc.extractor import extract_from_pdf
-from invoice_qc.validator import validate_invoices
+
 
 app = FastAPI(title="Invoice QC Service")
 
@@ -36,6 +35,10 @@ async def health():
 @app.post("/extract-and-validate")
 @app.post("/api/main/extract-and-validate")
 async def process(files: List[UploadFile] = File(...)):
+    # Imported lazily so /health stays up even if the package bundle is broken.
+    from invoice_qc.extractor import extract_from_pdf
+    from invoice_qc.validator import validate_invoices
+
     invoices = []
     for file in files:
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
