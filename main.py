@@ -52,6 +52,7 @@ async def process(files: List[UploadFile] = File(...)):
             tmp_path = Path(tmp.name)
 
         inv = extract_from_pdf(tmp_path)
+        inv.source_file = file.filename or tmp_path.name
         invoices.append(inv)
         tmp_path.unlink()
 
