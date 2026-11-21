@@ -20,10 +20,12 @@ app.add_middleware(
 )
 
 @app.get("/health")
+@app.get("/api/main/health")
 async def health():
     return {"status": "ok"}
 
 @app.post("/extract-and-validate")
+@app.post("/api/main/extract-and-validate")
 async def process(files: List[UploadFile] = File(...)):
     invoices = []
     for file in files:

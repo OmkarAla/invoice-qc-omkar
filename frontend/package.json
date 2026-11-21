@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@roger-hub/package-01": "^1.0.9",
     "axios": "^1.13.2",
+    "lucide-react": "^1.77.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
