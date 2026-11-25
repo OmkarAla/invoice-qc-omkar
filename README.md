@@ -6,6 +6,8 @@ Extract, validate and review German B2B invoices from PDFs.
 
 > Demo project. The parser is heuristic and tuned for German `Bestellung` / invoice layouts, not a general document-AI product.
 
+> A Next.js App Router rebuild of the console — server components, streaming SSR and GraphQL — lives at [invoice-qc-next](https://github.com/OmkarAla/invoice-qc-next).
+
 ## What it does
 
 Upload one or more PDFs. The service extracts the header fields and line items, validates them against a Pydantic schema plus business rules, and returns a per-invoice pass/fail result with the exact errors. The React console shows the parsed values next to the errors, so a reviewer can see what the machine saw.
